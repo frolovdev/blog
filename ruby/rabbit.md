@@ -1,0 +1,1 @@
+https://medium.com/kudos-to-you/background-job-in-rails-using-rabbitmq-and-sneaker-449c07284abf

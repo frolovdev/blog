@@ -1,0 +1,1 @@
+(https://www.youtube.com/watch?v=WE9c9AZe-DY&ab_channel=InfoQ&t=0s)[How Slack Works]
