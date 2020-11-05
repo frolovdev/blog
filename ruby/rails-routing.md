@@ -8,12 +8,24 @@
   end
   ```
 
-  appointess_admin_issue_path
 
+```
+appointess_admin_issue_path
+```
 
 if nesting resoruces
-
+```
 edit_admin_issue_product
+
+accounts_url         #-> /accounts
+account_url(1)       #-> /accounts/1
+people_url(1)        #-> /accounts/1/people
+person_url(1,2)      #-> /accounts/1/people/2
+notes_url(1,2)       #-> /accounts/1/people/2/notes
+note_url(1,2,3)      #-> /accounts/1/people/2/notes/3
+comments_url(1,2,3)  #-> /accounts/1/people/2/notes/3/comments
+comment_url(1,2,3,4) #-> /accounts/1/people/2/notes/3/comments/4
+```
 
 ## Members
 
@@ -194,3 +206,7 @@ end
 ```ruby
   CONTROLLER=users rake routes
 ```
+
+## Giude about nesting routes
+
+Simple! However, in using RESTful routes more and more, I’m coming to realize that this is not a best practice. Rule of thumb: resources should never be nested more than 1 level deep. A collection may need to be scoped by its parent, but a specific member can always be accessed directly by an id, and shouldn’t need scoping (unless the id is not unique, for some reason).
